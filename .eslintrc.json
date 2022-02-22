@@ -1,0 +1,13 @@
+{
+  "extends": "next/core-web-vitals",
+  "settings": {
+    "next": {
+      "rootDir": "packages/my-app/"
+    }
+  },
+  "rules": {
+    // "semi": ["error", "always"],
+    // "quotes": ["error", "double"]
+    "eqeqeq":["error","always"]
+  }
+}
