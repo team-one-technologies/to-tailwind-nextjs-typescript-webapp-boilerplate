@@ -11,8 +11,6 @@ type Props = {
 };
 const Layout = ({ children, title = "This is the default title" }: Props) => {
 
-  const { t } = useTranslation("common");
-
   return (
     <div>
       <Head>
@@ -21,7 +19,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="h-90 flex flex-row">
-        <div className="bg-lime-500 p-2 basis-1/5">
+        <div className="p-2 h-screen basis-1/5 ">
           <Navbar />
         </div>
         <div className="h-screen basis-4/5">
@@ -31,7 +29,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
               {children}
             </main>
             <footer className="h-10 p-2 bg-blue-500">
-              <span>{t('footer.title')}</span>
+              <span>{('footer.title')}</span>
             </footer>
           </div>
         </div>

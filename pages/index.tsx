@@ -8,7 +8,7 @@ import { withTranslation } from "react-i18next";
 
 function Home({ t, i18n }: any) {
   const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng).then(res => console.log(res));
+    i18n.changeLanguage(lng).then((res: any) => console.log(res));
   };
   // const changeLanguage = (lng: string) =>  console.log("Reached",lng);
   return (
@@ -22,7 +22,7 @@ function Home({ t, i18n }: any) {
         <button onClick={() => changeLanguage("np")}>np</button> <hr />
         <button onClick={() => changeLanguage("en")}>en</button>
       </Layout>
-    </div>
+    </div>  
   );
 }
 
