@@ -7,6 +7,7 @@ import Layout from "../../components/Layout";
 import List from "../../components/List";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { withTranslation } from "next-i18next";
+import { ReactElement } from "react";
 
 type Props = {
   items: User[];
@@ -17,18 +18,18 @@ type Props = {
 
 const WithStaticProps = ({ items, t }: Props) => {
   return (
-    <Layout title="Users List">
-      <p>
-        <h1> {t("list.title")}</h1>
-      </p>
-      <p>You are currently on: /users</p>
-      <List items={items} />
-      <p>
-        <Link href="/">
-          <a>Go home</a>
-        </Link>
-      </p>
-    </Layout>
+      <div>
+        <p>
+          <h1> {("list.title")}</h1>
+        </p>
+        <p>You are currently on: /users</p>
+        <List items={items} />
+        <p>
+          <Link href="/">
+            <a>Go home</a>
+          </Link>
+        </p>
+      </div>
   );
 };
 
@@ -56,4 +57,13 @@ export async function getStaticProps({ locale }: any) {
 //   };
 // };
 
-export default withTranslation()(WithStaticProps);
+WithStaticProps.getLayout = function getLayout(page: ReactElement){
+  return(
+      <Layout >
+          {page}
+      </Layout>
+  )
+
+}
+
+export default WithStaticProps;
