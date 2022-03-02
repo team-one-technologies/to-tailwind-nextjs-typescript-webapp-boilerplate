@@ -14,25 +14,20 @@ type Props = {
   t: Function;
 };
 
-
-
 const WithStaticProps = ({ items, t }: Props) => {
   return (
-    <Layout title="Users">
-
-      <div>
-        <p>
-          <h1> {("list.title")}</h1>
-        </p>
-        <p>You are currently on: /users</p>
-        <List items={items} />
-        <p>
-          <Link href="/">
-            <a>Go home</a>
-          </Link>
-        </p>
-      </div>
-      </Layout>
+    <div>
+      <p>
+        <h1> {"list.title"}</h1>
+      </p>
+      <p>You are currently on: /users</p>
+      <List items={items} />
+      <p>
+        <Link href="/">
+          <a>Go home</a>
+        </Link>
+      </p>
+    </div>
   );
 };
 
@@ -60,13 +55,8 @@ export async function getStaticProps({ locale }: any) {
 //   };
 // };
 
-WithStaticProps.getLayout = function getLayout(page: ReactElement){
-  return(
-      <Layout >
-          {page}
-      </Layout>
-  )
-
-}
+WithStaticProps.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
 
 export default WithStaticProps;

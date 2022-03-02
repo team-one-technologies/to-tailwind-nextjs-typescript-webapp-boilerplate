@@ -6,11 +6,7 @@ type DashBoardProps = {
   t: Function;
 };
 const DashBorad = ({ t }: DashBoardProps) => {
-  return (
-    <Layout title="Dashboard">
-      <p>Dashboard</p>
-    </Layout>
-  );
+  return <p>Dashboard</p>;
 };
 
 export async function getStaticProps({ locale }: any) {

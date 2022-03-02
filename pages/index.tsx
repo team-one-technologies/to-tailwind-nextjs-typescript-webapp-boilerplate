@@ -17,7 +17,7 @@ function Home({ Component, pageProps, children, t, i18n }: any) {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout title={"Dashboard"} />
+      
     </div>
   );
 }
