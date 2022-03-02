@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+import Layout from "../../components/Layouts";
 import { withTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
@@ -8,7 +8,7 @@ type DashBoardProps = {
 const DashBorad = ({ t }: DashBoardProps) => {
   return (
     <Layout title="Dashboard">
-      <p>{t("navbar.dashboard")}</p>
+      <p>Dashboard</p>
     </Layout>
   );
 };

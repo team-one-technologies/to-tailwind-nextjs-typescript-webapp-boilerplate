@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { User } from "../../interfaces";
 import { sampleUserData } from "../../utils/sample-data";
-import Layout from "../../components/Layout";
+import Layout from "../../components/Layouts";
 import List from "../../components/List";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { withTranslation } from "next-i18next";
@@ -18,6 +18,8 @@ type Props = {
 
 const WithStaticProps = ({ items, t }: Props) => {
   return (
+    <Layout title="Users">
+
       <div>
         <p>
           <h1> {("list.title")}</h1>
@@ -30,6 +32,7 @@ const WithStaticProps = ({ items, t }: Props) => {
           </Link>
         </p>
       </div>
+      </Layout>
   );
 };
 

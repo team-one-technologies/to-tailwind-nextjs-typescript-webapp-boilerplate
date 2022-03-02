@@ -1,6 +1,6 @@
 import * as React from "react";
-import ListItem from "./ListItem";
-import { User } from "../interfaces";
+import ListItem from "../ListItem";
+import { User } from "../../interfaces";
 import { useTranslation } from "next-i18next";
 
 type Props = {

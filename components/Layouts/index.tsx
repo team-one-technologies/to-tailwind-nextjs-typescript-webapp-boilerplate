@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
-import Navbar from "./Navbar";
-import Header from "./Header";
+import Navbar from "../Sidenav";
+import Header from "../Header";
 import { useTranslation } from "next-i18next";
 
 type Props = {
