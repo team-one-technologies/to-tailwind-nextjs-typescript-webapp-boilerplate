@@ -10,7 +10,7 @@ type Props = {
 
 const Navbar = () => {
   return (
-    <div className="w-full h-full absoulte sidebar ">
+    <div className="w-full h-full absoulte sidebar border-r-2 border-gray-200 ">
       <div className="px-3 py-4 overflow-y-auto rounded dark:bg-gray-800 h-full">
         <a href="https://flowbite.com" className="flex pl-2.5 mb-5">
           <svg

@@ -18,11 +18,12 @@ type Props = {
 
 const WithStaticProps = ({ items, t }: Props) => {
   return (
-      <div>
-        <p>
-          <h1> {("list.title")}</h1>
-        </p>
-        <p>You are currently on: /users</p>
+    <Layout title="Users">
+      <div className="flex flex-col items-start p-3 mx-auto">
+        <div>
+        <h1 className="text-xl font-semibold"> All Users</h1>
+        </div>
+         
         <List items={items} />
         <p>
           <Link href="/">
@@ -30,6 +31,7 @@ const WithStaticProps = ({ items, t }: Props) => {
           </Link>
         </p>
       </div>
+      </Layout>
   );
 };
 
@@ -44,26 +46,6 @@ export async function getStaticProps({ locale }: any) {
     },
   };
 }
-// export const getStaticProps: GetStaticProps = async ({ locale }: any) => {
-//   // Example for including static props in a Next.js function component page.
-//   // Don't forget to include the respective types for any props passed into
-//   // the component.
-//   const items: User[] = sampleUserData;
-//   return {
-//     props: {
-//       items,
-//       ...(await serverSideTranslations(locale, ["common"])),
-//     },
-//   };
-// };
 
-WithStaticProps.getLayout = function getLayout(page: ReactElement){
-  return(
-      <Layout >
-          {page}
-      </Layout>
-  )
 
-}
-
-export default WithStaticProps;
+export default withTranslation()(WithStaticProps);
