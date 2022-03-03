@@ -1,4 +1,6 @@
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
+import Router from "next/router";
+
 type LoginPageProps = {
   t: Function;
 };
@@ -161,6 +163,7 @@ const Login = ({ t }: LoginPageProps) => {
                 <button
                   type="submit"
                   className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-lg text-lg font-medium text-white bg-lime-500 hover:bg-lime-400 neumorph transition ease-in-out  duration-300"
+                  onClick={() => Router.push("/dasboard")}
                 >
                   Sign In
                 </button>

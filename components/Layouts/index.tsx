@@ -1,14 +1,14 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
-import Navbar from "./Navbar";
-import Header from "./Header";
+import Navbar from "../Sidenav";
+import Header from "../Header";
 import { useTranslation } from "next-i18next";
 
 type Props = {
   children?: ReactNode;
   title?: string;
 };
-const Layout = ({ children, title = "This is the default title" }: Props) => {
+const Layout = ({ children, title = "Some Information" }: Props) => {
   return (
     <div>
       <Head >

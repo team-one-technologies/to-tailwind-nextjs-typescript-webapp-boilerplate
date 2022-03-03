@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { User } from "../../interfaces";
 import { sampleUserData } from "../../utils/sample-data";
-import Layout from "../../components/Layout";
+import Layout from "../../components/Layouts";
 import List from "../../components/List";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { withTranslation } from "next-i18next";
@@ -13,8 +13,6 @@ type Props = {
   items: User[];
   t: Function;
 };
-
-
 
 const WithStaticProps = ({ items, t }: Props) => {
   return (
@@ -47,5 +45,11 @@ export async function getStaticProps({ locale }: any) {
   };
 }
 
+<<<<<<< HEAD
+=======
+WithStaticProps.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+>>>>>>> 86c6b73d886c602e0de4d6418c66b7ec8988c50a
 
 export default withTranslation()(WithStaticProps);
