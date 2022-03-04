@@ -8,6 +8,7 @@ import List from "../../components/List";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { withTranslation } from "next-i18next";
 import { ReactElement } from "react";
+import ToCard from "../../components/ToCard";
 
 type Props = {
   items: User[];
@@ -16,18 +17,20 @@ type Props = {
 
 const WithStaticProps = ({ items, t }: Props) => {
   return (
-    <div>
-      <p>
-        <h1> {"list.title"}</h1>
-      </p>
-      <p>You are currently on: /users</p>
-      <List items={items} />
-      <p>
-        <Link href="/">
-          <a>Go home</a>
-        </Link>
-      </p>
-    </div>
+    <ToCard title="Users">
+      <div>
+        <p>
+          <h1> {"list.title"}</h1>
+        </p>
+        <p>You are currently on: /users</p>
+        <List items={items} />
+        <p>
+          <Link href="/">
+            <a>Go home</a>
+          </Link>
+        </p>
+      </div>
+    </ToCard>
   );
 };
 
