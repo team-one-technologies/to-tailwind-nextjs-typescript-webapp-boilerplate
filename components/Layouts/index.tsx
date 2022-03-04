@@ -17,7 +17,7 @@ const Layout = ({ children, title = "Some Information" }: Props) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="min-h-screen flex flex-row overflow-y-hidden font-Oxygen">
-        <div className="p-2 h-screen basis-1/5">
+        <div className=" h-screen basis-1/5">
           <Navbar />
         </div>
         <div className="h-screen basis-4/5 bg-white">
@@ -26,7 +26,7 @@ const Layout = ({ children, title = "Some Information" }: Props) => {
               <Header title={title} />
             </div>
             <div>
-              <main className="mb-auto p-3 min-h-screen bg-white basis-3/5">
+              <main className="mb-auto p-4 min-h-screen bg-gray-200 basis-3/5">
                 {children}
               </main>
             </div>

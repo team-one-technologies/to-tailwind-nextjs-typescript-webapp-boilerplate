@@ -9,12 +9,12 @@ export const Routes = [
     },
     {
         path:"/users",
-        icon:IconTypes.Dashboard,
+        icon:IconTypes.User,
         name:"Users"
     },
     {
         path:"/fields",
-        icon:IconTypes.Dashboard,
+        icon:IconTypes.Farm,
         name:"Fields"
     },
     {

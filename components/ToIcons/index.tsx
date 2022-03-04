@@ -2,6 +2,8 @@
 import * as React from "react";
 import Banner from "./assets/banner.svg";
 import Dashboard from "./assets/dashboard.svg";
+import User from "./assets/user.svg";
+import Farm from "./assets/farm.svg";
 import Image from "next/image";
 // import  './toicons.scss'
 import styles from "./toicons.module.css";
@@ -40,6 +42,8 @@ const ToIcon = ({ type, size, style }: Props) => {
 export const IconTypes = {
   Banner: Banner,
   Dashboard: Dashboard,
+  User:User,
+  Farm:Farm,
 };
 
 export const IconStyles = {
