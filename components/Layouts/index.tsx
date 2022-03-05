@@ -18,24 +18,27 @@ const Layout = ({ children, title = "Some Information" }: Props) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="min-h-screen flex flex-row overflow-y-scroll font-Oxygen">
+      <div className="min-h-screen flex flex-row overflow-y-hidden font-Oxygen">
         <div className=" h-screen basis-1/5">
           <Navbar />
         </div>
         <div className="h-screen basis-4/5 bg-white">
+          {/* <div className="flex flex-col justify-between"> */}
           <div className="flex flex-col h-screen justify-between">
+            {/* remove h-screen above and try to reduce header height */}
             <div className="basis-1/5">
               <Header title={title} />
             </div>
-            <div>
+            <div className={"overflow-y-scroll"}>
               <main className="mb-auto p-4 min-h-screen bg-gray-200 basis-3/5">
                 {children}
               </main>
             </div>
+            <Footer />
           </div>
         </div>
       </div>
-        {/* <Footer /> */}
+      {/* <Footer /> */}
     </>
   );
 };
