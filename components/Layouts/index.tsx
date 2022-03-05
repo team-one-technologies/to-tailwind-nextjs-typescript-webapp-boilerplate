@@ -22,10 +22,10 @@ const Layout = ({ children, title = "Some Information" }: Props) => {
         <div className=" h-screen basis-1/5">
           <Navbar />
         </div>
-        <div className="h-screen basis-4/5 bg-white">
+        <div className="h-screen basis-4/5 ">
           {/* <div className="flex flex-col justify-between"> */}
           <div className="flex flex-col h-screen justify-between">
-            {/* remove h-screen above and try to reduce header height */}
+            {/* remove h-screen above and try to reduce header height  / Class below needs to be fixed*/}
             <div className="basis-1/5">
               <Header title={title} />
             </div>

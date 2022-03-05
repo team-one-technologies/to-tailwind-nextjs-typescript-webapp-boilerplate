@@ -16,7 +16,7 @@ const Header = ({ title,changeCollapse,currentCollapse }: Props) => {
   };
 
   return (
-    <header className="p-2 flex flex-row justify-between font-Oxygen">
+    <header className="p-2 flex flex-row  bg-blue-400 justify-between font-Oxygen">
       <div className="p-2">
         <span className="text-xl font-bold px-4"> {title}</span>
       </div>
